@@ -4,20 +4,18 @@
 
 <p><%= content %></p>
 
-
-
 <% posts.forEach(function (element) {  %>
 <div class="">
-    <h1><%= element.title %></h1>
-    <% if( element.body.length > 100 ) { %>
+    <h1><%= element.postTitle %></h1>
+    <% if( element.postBody.length > 100 ) { %>
     <p>
-        <%=element.body.substring(0,100) + "..." %>
-        <a href="/posts/<%=element.postID%>">Read More</a>
+        <%=element.postBody.substring(0,100) + "..." %>
+        <a href="/posts/<%=element._id%>">Read More</a>
     </p>
     <% } else { %>
     <p>
-        <%=element.body %>
-        <!-- <a href="/posts/<%=element.postID%>">Read More</a> -->
+        <%=element.postBody %>
+        <!-- <a href="/posts/<%=element._id%>">Read More</a> -->
     </p>
     <% }  %>
 
